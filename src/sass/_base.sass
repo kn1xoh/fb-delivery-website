@@ -1,0 +1,74 @@
+$purple-400: #A78BFA
+$purple-500: #8B5CF6
+$purple-700: #6D28D9
+$gray-50: #F9FAFB
+$gray-900: #111827
+
+@font-face
+    font-family: "Formular"
+    src: url("../fonts/FormularLight.woff2") format("woff2"), url("../fonts/FormularLight.woff") format("woff")
+    font-weight: 300
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: "Formular"
+    src: url("../fonts/FormularRegular.woff2") format("woff2"), url("../fonts/FormularRegular.woff") format("woff")
+    font-weight: 400
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: "Formular"
+    src: url("../fonts/FormularBold.woff2") format("woff2"), url("../fonts/FormularBold.woff") format("woff")
+    font-weight: 700
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: "Formular"
+    src: url("../fonts/FormularBlack.woff2") format("woff2"), url("../fonts/FormularBlack.woff") format("woff")
+    font-weight: 900
+    font-style: normal
+    font-display: swap
+
+@mixin adaptive($breakpoint)
+    @if $breakpoint == extra-small
+        @media only screen and (max-width: 360px)
+            @content
+
+    @if $breakpoint == small
+        @media only screen and (max-width: 576px)
+            @content
+
+    @if $breakpoint == medium
+        @media only screen and (max-width: 768px)
+            @content
+
+    @if $breakpoint == custom-928px
+        @media only screen and (max-width: 928px)
+            @content
+
+    @if $breakpoint == large
+        @media only screen and (max-width: 992px)
+            @content
+
+    @if $breakpoint == custom-1120px
+        @media only screen and (max-width: 1120px)
+            @content
+
+    @if $breakpoint == extra-large
+        @media only screen and (max-width: 1310px)
+            @content
+
+body
+    min-width: 360px
+    font-family: "Formular", sans-serif
+    color: $gray-900
+
+.container
+    max-width: 1536px
+    margin: 0 auto
+
+.link-reset
+    text-decoration: none
