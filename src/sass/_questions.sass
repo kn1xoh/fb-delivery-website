@@ -1,0 +1,33 @@
+.questions
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+        border-radius: 16px
+        background-color: $gray-50
+        padding: 64px
+    &__title
+        margin-bottom: 32px
+    &__form
+        display: flex
+        flex-wrap: wrap
+        gap: 24px
+        max-width: 496px
+    &__input
+        width: 236px
+        height: 48px
+        padding: 12px
+        border: 2px solid $gray-900
+        border-radius: 4px
+        &::placeholder
+            color: $gray-400
+    &__input--large
+        width: 496px
+        height: 150px
+        padding-bottom: 114px
+        overflow: scroll
+        &::placeholder
+            position: absolute
+            top: 12px
+    &__btn
+        width: 496px
