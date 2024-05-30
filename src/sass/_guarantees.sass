@@ -1,5 +1,5 @@
 .guarantees
-    margin-bottom: $mb-block
+    margin-bottom: var(--mb-block)
     &__title
         text-align: center
         margin-bottom: 12px
@@ -10,6 +10,7 @@
         margin-bottom: 24px
     &__list
         display: flex
+        justify-content: center
         flex-wrap: wrap
         gap: 24px
         margin-bottom: 36px
@@ -19,6 +20,10 @@
         align-items: center
         width: 366px
         height: 435px
+        @include adaptive(extra-large)
+            width: 396px
+        @include adaptive(large)
+            width: 366px
     &__img
         margin-bottom: 4px
     &__inner-text

@@ -1,11 +1,38 @@
 .footer
     background-color: $gray-900
+    padding: 40px 0
+    &__container
+        @include adaptive(extra-large)
+            max-width: 1152px
+        @include adaptive(large)
+            max-width: 768px
     &__top
         display: flex
         justify-content: space-between
         align-items: center
-        padding-top: 40px
-        padding-bottom: 24px
+        margin-bottom: 24px
+        @include adaptive(medium)
+            flex-direction: column-reverse
+            gap: 8px
+    &__nav
+        @include adaptive(large)
+            display: none
+    &__nav--mobile
+        display: none
+        @include adaptive(large)
+            display: flex
+            justify-content: center
+            margin-bottom: 24px
+    &__phone-link
+        font-size: 30px
+    &__phone-text
+        display: block
+        font-size: 20px
+    &__logo-wrap
+        display: flex
+        flex-direction: column
+        @include adaptive(medium)
+            align-items: center
     &__logo-link
         display: block
         margin-bottom: 8px
@@ -16,18 +43,31 @@
     &__bottom
         display: flex
         justify-content: space-between
-        align-items: flex-end
+        align-items: flex-start
         font-weight: 300
         font-size: 12px
         line-height: 133%
         color: $gray-500
-        padding-bottom: 40px
+        @include adaptive(large)
+            flex-direction: column
+            align-items: center
     &__disclaimer
-        max-width: 1150px
-        margin-right: 30px
+        width: 1150px
+        color: $gray-600
+        @include adaptive(extra-large)
+            width: 910px
+        @include adaptive(large)
+            text-align: center
+            width: 750px
+            margin-bottom: 8px
+        @include adaptive(medium)
+            width: 502px
     &__author
         text-align: right
-        max-width: 242px
+        width: 242px
+        @include adaptive(large)
+            text-align: center
+            width: 100%
     &__author-link
         color: inherit
         text-decoration-skip-ink: none

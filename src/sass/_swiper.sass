@@ -2,18 +2,31 @@
     position: static
     width: 1276px
     height: 340px
+    @include adaptive(extra-large)
+        width: 816px
+        height: 260px
+    @include adaptive(large)
+        width: 570px
+        height: 224px
+    @include adaptive(medium)
+        width: 442px
+        height: 270px
 
 .swiper-slide
     width: 626px
     &:not(:last-child)
         margin-right: 24px
+        @include adaptive(large)
+            margin-right: 0
+    @include adaptive(extra-large)
+        width: 396px
 
 .swiper-button-prev, .swiper-button-next
     position: absolute
     width: 60px
     height: 60px
     border: none
-    color: transparent
+    color: $purple-500
     background: transparent
     padding: 0
     &::after

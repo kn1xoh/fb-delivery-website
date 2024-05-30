@@ -5,9 +5,15 @@ $gray-50: #F9FAFB
 $gray-200: #E5E7EB
 $gray-400: #9CA3AF
 $gray-500: #6B7280
+$gray-600: #4B5563
 $gray-900: #111827
 
-$mb-block: 72px
+:root
+    --mb-block: 72px
+
+@media only screen and (max-width: 1625px)
+    :root
+        --mb-block: 48px
 
 @font-face
     font-family: "Formular"
@@ -47,37 +53,33 @@ $mb-block: 72px
             @content
 
     @if $breakpoint == medium
-        @media only screen and (max-width: 768px)
-            @content
-
-    @if $breakpoint == custom-928px
-        @media only screen and (max-width: 928px)
+        @media only screen and (max-width: 840px)
             @content
 
     @if $breakpoint == large
-        @media only screen and (max-width: 992px)
-            @content
-
-    @if $breakpoint == custom-1120px
-        @media only screen and (max-width: 1120px)
+        @media only screen and (max-width: 1250px)
             @content
 
     @if $breakpoint == extra-large
-        @media only screen and (max-width: 1310px)
+        @media only screen and (max-width: 1625px)
             @content
 
 body
-    min-width: 360px
+    min-width: 758px
     font-family: "Formular", sans-serif
     font-weight: 400
     color: $gray-900
-
-.main
     background-color: $gray-200
 
 .container
     max-width: 1536px
     margin: 0 auto
+    @include adaptive(extra-large)
+        max-width: 1024px
+    @include adaptive(large)
+        max-width: 768px
+    @include adaptive(medium)
+        max-width: 640px
 
 .link-reset
     text-decoration: none

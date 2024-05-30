@@ -4,3 +4,26 @@
         font-weight: 400
         font-size: 16px
         line-height: 150%
+        width: 363px
+        @include adaptive(large)
+            font-size: 14px
+            line-height: 143%
+            text-align: center
+            width: 233px
+        @include adaptive(medium)
+            width: 184px
+    &__text--large
+        @include adaptive(medium)
+            width: 223px
+    @include adaptive(large)
+        display: none
+
+.course--mobile
+    display: none
+    @include adaptive(large)
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+    @include adaptive(medium)
+        justify-content: space-between

@@ -1,12 +1,35 @@
 .delivery
-    padding-top: $mb-block
-    margin-bottom: $mb-block
+    padding-top: var(--mb-block)
+    margin-bottom: var(--mb-block)
+    @include adaptive(medium)
+        padding-top: 40px
     &__container
         display: flex
         gap: 24px
+        @include adaptive(extra-large)
+            flex-direction: column
+            gap: 40px
+    &__content
+        @include adaptive(extra-large)
+            display: flex
+            justify-content: space-between
+        @include adaptive(large)
+            flex-direction: column
+    &__content-text
+        @include adaptive(extra-large)
+            width: 505px
+        @include adaptive(large)
+            width: 100%
     &__title
         max-width: 756px
         margin-bottom: 12px
     &__text
         max-width: 756px
         margin-bottom: 16px
+    &__img
+        @include adaptive(extra-large)
+            width: 505px
+            height: 232px
+        @include adaptive(large)
+            width: 100%
+            height: auto

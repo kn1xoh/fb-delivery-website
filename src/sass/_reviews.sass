@@ -1,6 +1,5 @@
 .reviews
-    user-select: none
-    margin-bottom: $mb-block
+    margin-bottom: var(--mb-block)
     &__container
         position: relative
     &__title
@@ -19,6 +18,12 @@
         background-position: right 18px bottom 8px
         font-size: 24px
         line-height: 133%
+        user-select: none
+        @include adaptive(extra-large)
+            font-size: 18px
+            padding: 16px
+        @include adaptive(large)
+            padding: 32px
     &__text
         font-weight: 300
         max-width: 540px

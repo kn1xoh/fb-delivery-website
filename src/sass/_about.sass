@@ -1,12 +1,18 @@
 .about
-    margin-bottom: $mb-block
+    margin-bottom: var(--mb-block)
     &__title
         text-align: center
         margin-bottom: 24px
+        @include adaptive(large)
+            margin-bottom: 34px
     &__list
         display: flex
         flex-wrap: wrap
         gap: 24px
+        @include adaptive(large)
+            gap: 34px 24px
+        @include adaptive(medium)
+            justify-content: center
     &__item
         display: flex
         flex-direction: column
@@ -19,6 +25,13 @@
         background-repeat: no-repeat
         background-size: 136px 136px
         background-position: left 24px center
+        @include adaptive(large)
+            width: 372px
+            height: 140px
+            padding: 0
+            padding-left: 121px
+            background-size: 109px 110px
+            background-position: left
     &__inner-title
         margin-bottom: 12px
     &__text

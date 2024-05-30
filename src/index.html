@@ -26,10 +26,16 @@
                         <a class="link-reset phone__link" href="tel:78001234567">+7 (800) 123 45-67</a>
                         <p class="phone__text">Звонки по России бесплатны</p>
                     </div>
+
+                    <div class="burger">
+                        <span class="burger__span"></span>
+                        <span class="burger__span"></span>
+                        <span class="burger__span"></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="header__bottom">
+            <div class="header__bottom header__bottom--hidden">
                 <nav class="header__nav nav">
                     <ul class="nav__list">
                         <li class="nav__item nav__item--current"><a class="link-reset nav__link" href="#">Калькулятор</a></li>
@@ -41,6 +47,12 @@
 
                 <a class="link-reset header__btn btn" href="#">Оставить заявку</a>
             </div>
+
+            <div class="header__course-hidden course course--mobile">
+                <p class="course__text">Доставляем товары из&nbsp;заграницы в&nbsp;Россию</p>
+                <p class="course__text">Стоимость от&nbsp;550 рублей за&nbsp;заказ</p>
+                <p class="course__text course__text--large">1&nbsp;$ = 93&nbsp;₽&nbsp;| 1&nbsp;&euro; = 99&nbsp;₽&nbsp;| 1&nbsp;&yen; = 13&nbsp;₽</p>
+            </div>
         </div>
     </header>
 
@@ -48,15 +60,17 @@
         <section class="delivery">
             <div class="container delivery__container">
                 <div class="delivery__content">
-                    <h1 class="delivery__title title-1">Без проблемная доставка купленных вещей из&nbsp;США, Европы и&nbsp;Азии в&nbsp;Россию</h1>
-                    <p class="delivery__text text-1">Сэкономьте на покупках и наслаждайтесь мировыми брендами — наш сервис позволяет вам легко и удобно заказывать товары со всего мира и получать их в России</p>
+                    <div class="delivery__content-text">
+                        <h1 class="delivery__title title-1">Без проблемная доставка купленных вещей из&nbsp;США, Европы и&nbsp;Азии в&nbsp;Россию</h1>
+                        <p class="delivery__text text-1">Сэкономьте на покупках и наслаждайтесь мировыми брендами — наш сервис позволяет вам легко и удобно заказывать товары со всего мира и получать их в России</p>
+                    </div>
                     <img class="delivery__img" src="img/delivery.png" alt="" aria-hidden="true" width="756" height="352">
                 </div>
 
                 <div class="delivery__calc calc">
                     <h2 class="calc__title">Калькулятор доставки</h2>
                     <p class="calc__text">Посчитайте, сколько будет стоить перевозка покупки из&nbsp;зарубежа</p>
-                    <form class="calc__form" action="">
+                    <form class="calc__form" action="#" method="post">
                         <input class="calc__input calc__input--large" type="text" name="name" placeholder="Имя" required>
                         <input class="calc__input" type="email" name="email" placeholder="Почта" required>
                         <input class="calc__input" type="tel" name="tel" placeholder="Телефон">
@@ -187,12 +201,12 @@
             <div class="container questions__container">
                 <h2 class="questions__title title-2">Остались вопросы?</h2>
 
-                <form class="questions__form" action="">
+                <form class="questions__form" action="#" method="post">
                     <input class="questions__input" type="text" name="name" placeholder="Имя" required>
                     <input class="questions__input" type="email" name="email" placeholder="Почта" required>
                     <input class="questions__input" type="tel" name="tel" placeholder="Телефон" required>
                     <input class="questions__input" type="text" name="theme" placeholder="Тема вопроса" required>
-                    <input class="questions__input questions__input--large" type="text" name="message" placeholder="Сообщение..." required>
+                    <textarea class="questions__input questions__input--large" name="message" placeholder="Сообщение..." required></textarea>
                     <button class="questions__btn btn">Оставить заявку</button>
                 </form>
             </div>
@@ -200,9 +214,19 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container footer__container">
+
+            <nav class="nav footer__nav footer__nav--mobile">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--white"><a class="link-reset nav__link" href="#">Калькулятор</a></li>
+                    <li class="nav__item nav__item--white"><a class="link-reset nav__link" href="#">О нас</a></li>
+                    <li class="nav__item nav__item--white"><a class="link-reset nav__link" href="#">Гарантии</a></li>
+                    <li class="nav__item nav__item--white"><a class="link-reset nav__link" href="#">Отзывы</a></li>
+                </ul>
+            </nav>
+
             <div class="footer__top">
-                <div class="logo-wrap">
+                <div class="footer__logo-wrap">
                     <a class="footer__logo-link" href="#"><img class="footer__logo-img" src="img/logo-white.svg" width="305" height="74" alt="logo FromBoard Delivery"></a>
                     <p class="footer__logo-text">2023&nbsp;&copy; Ни&nbsp;одно право не&nbsp;защищено, копируйте сколько влезет</p>
                 </div>
@@ -216,9 +240,9 @@
                     </ul>
                 </nav>
 
-                <div class="header__phone phone">
-                    <a class="link-reset phone__link phone__link--white" href="tel:78001234567">+7 (800) 123 45-67</a>
-                    <p class="phone__text phone__text--white">Звонки по России бесплатны</p>
+                <div class="footer__phone phone">
+                    <a class="link-reset phone__link phone__link--white footer__phone-link" href="tel:78001234567">+7 (800) 123 45-67</a>
+                    <p class="phone__text phone__text--white footer__phone-text">Звонки по России бесплатны</p>
                 </div>
             </div>
 
@@ -228,5 +252,40 @@
             </div>
         </div>
     </footer>
+
+    <div class="burger-menu">
+        <header class="header header--burger">
+            <div class="container">
+                <div class="header__top header__top-burger">
+                    <a class="header__logo-link" href="#"><img class="header__logo-img" src="img/logo.svg" width="305" height="74" alt="logo FromBoard Delivery"></a>
+                    <div class="header__info-wrap">
+                        <div class="header__phone phone">
+                            <a class="link-reset phone__link" href="tel:78001234567">+7 (800) 123 45-67</a>
+                        </div>
+
+                        <img class="burger-menu__close" src="img/close.svg" alt="Закрыть меню">
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li class="nav__item nav__item--current"><a class="link-reset nav__link" href="#">Калькулятор</a></li>
+                            <li class="nav__item"><a class="link-reset nav__link" href="#">О нас</a></li>
+                            <li class="nav__item"><a class="link-reset nav__link" href="#">Гарантии</a></li>
+                            <li class="nav__item"><a class="link-reset nav__link" href="#">Отзывы</a></li>
+                        </ul>
+                    </nav>
+
+                    <a class="link-reset header__btn btn" href="#">Оставить заявку</a>
+                </div>
+
+                <div class="course course--mobile">
+                    <p class="course__text">Доставляем товары из&nbsp;заграницы в&nbsp;Россию</p>
+                    <p class="course__text">Стоимость от&nbsp;550 рублей за&nbsp;заказ</p>
+                    <p class="course__text course__text--large">1&nbsp;$ = 93&nbsp;₽&nbsp;| 1&nbsp;&euro; = 99&nbsp;₽&nbsp;| 1&nbsp;&yen; = 13&nbsp;₽</p>
+                </div>
+            </div>
+        </header>
+    </div>
 </body>
 </html>

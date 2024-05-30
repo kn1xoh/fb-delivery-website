@@ -1,16 +1,31 @@
 .phone
     display: flex
     flex-direction: column
+    width: max-content
     &__link
         font-weight: 900
         font-size: 36px
         line-height: 111%
         color: $gray-900
+        margin-bottom: 4px
+        @include adaptive(extra-large)
+            font-size: 30px
+        @include adaptive(large)
+            font-size: 24px
+        @include adaptive(medium)
+            font-size: 20px
+            margin-bottom: 0
     &__link--white
         color: $gray-50
     &__text
         font-weight: 300
         font-size: 24px
         line-height: 133%
+        @include adaptive(extra-large)
+            font-size: 20px
+        @include adaptive(large)
+            font-size: 16px
+        @include adaptive(medium)
+            display: none
     &__text--white
         color: $gray-50
